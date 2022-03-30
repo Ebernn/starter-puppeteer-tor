@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import colors from 'colors/safe';
 
 (async () => {
-	const args = ['--proxy-server=socks5://localhost:9051'];
+	const args = ['--proxy-server=http://127.0.0.1:8118'];
 	const browser = await puppeteer.launch({ args });
 	const page = await browser.newPage();
 	await page.goto('https://check.torproject.org/');
